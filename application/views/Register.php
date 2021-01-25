@@ -18,7 +18,8 @@
     <!-- Pills content -->
     <div class="tab-content">
       <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-        <form>
+        <form id="registerformEmployee" action="<?php echo base_url(); ?>index.php/Register/createAccountEmployee" method="POST">
+
           <!-- Name input -->
           <div class="form-outline mb-4">
             <input type="text" id="registerNameE" name='registerNameE' class="form-control" />
@@ -93,7 +94,7 @@
             </label>
           </div>
           <!-- Submit button -->
-          <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+          <button id='btn-register-employee' type="submit" class="btn btn-primary btn-block mb-4">Register</button>
 
           <!-- Register buttons -->
           <div class="text-center">

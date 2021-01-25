@@ -12,12 +12,11 @@ class Admin extends CI_Controller
 
         parent::__construct();
 
-        if (!$this->session->userdata("Login") && $this->session->userdata('Role')==='ROLE_ADMIN'){
+        if (!$this->session->userdata("Login") && $this->session->userdata('Role') === 'ROLE_ADMIN') {
 
             redirect(base_url());
         }
         $this->load->model('M_Users');
-
     }
 
     // public function index()

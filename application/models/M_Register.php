@@ -2,10 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-/**
- * Hace conexion con la bdd  para el registro/ creacion de nuevos usuarios
- * 
- */
+
 
 class M_Register extends CI_Model
 {
@@ -18,13 +15,28 @@ class M_Register extends CI_Model
 	// {
 	// 	$query = $this->db->get('usuarios');
 	// 	return $query;
-    // }\
-    public function registerEmployee(string $name, string $last_name, string $email, string $password, string $phone, string $service, string $description, int $year_exp, string $country, string $city)
+	// }\
+	public function registerEmployee( $name,  $last_name,  $email,  $password, $country,  $city, $phone,  $service,   $year_exp , $description )
 	{
-	
-		$status= 1 ;
-		$role = 'ROLE_Employee';
-		$queryEmployee = $this->db->query("INSERT INTO trabajadores (name, last_name, email, password, phone, service, description, year_exp, country, city, status, role) VALUES ({$name}, {$last_name}, {$email}, {$password}, {$phone}, {$service}, {$description}, {$year_exp}, {$country}, {$city}, {$status}, {$role}) ");
+
+		$data = [
+			'name' => $name,
+			'last_name' => $last_name,
+			'email' => $email,
+			'password' => $password,
+			'phone' => $phone,
+			'service' => $service,
+			'description' => $description,
+			'year_exp' => $year_exp,
+			'country' => $country,
+			'city' => $city,
+			'status' => 1,
+			'role' => 'ROLE_Employee',
+
+		];
+
+		$queryEmployee =  $this->db->insert('trabajadores', $data);
+		
 
 		return  $queryEmployee;
 	}

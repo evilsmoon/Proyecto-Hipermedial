@@ -11,6 +11,8 @@ class Login extends CI_Controller
 
         $this->load->model('M_Login');
         $this->load->model('M_Users');
+        $this->load->model('M_Employee');
+        
     }
 
     public function index($page = 'Login')
@@ -28,20 +30,20 @@ class Login extends CI_Controller
 
     public function screenAdmin()
     {
-       $id = $this->session->userdata('id');
-       $role =$this->session->userdata('Role');
-        if (!$id ) {
+        $id = $this->session->userdata('id');
+        $role = $this->session->userdata('Role');
+        if (!$id) {
 
             redirect(base_url());
         } elseif ($role == 'ROLE_ADMIN') {
-        
+
             $data['get_users'] = $this->M_Users->get_users();
             $this->load->view('template_admin/Header');
             $this->load->view('template_admin/Navbar');
             $this->load->view('template_admin/Menu');
             $this->load->view('Admin', $data);
             $this->load->view('template_admin/Footer');
-        }else{
+        } else {
 
             redirect(base_url());
         }
@@ -51,17 +53,15 @@ class Login extends CI_Controller
     {
         if ($this->input->is_ajax_request()) {
 
-
             $correo = $this->input->post('txt_email');
             $clave  = $this->input->post('txt_password');
 
-            $res = $this->M_Login->loginAdmin($correo,$clave);
-
+            $res = $this->M_Login->loginAdmin($correo, $clave);
 
             if ($res) {
 
                 $data = [
-                    "id" => $res->ID_Administrador ,
+                    "id" => $res->ID_Administrador,
                     "Login" => TRUE,
                     "Role" => $res->role
                 ];
@@ -69,7 +69,21 @@ class Login extends CI_Controller
 
                 echo ('1');
             } else {
-                echo ('0');
+                $res2 = $this->M_Login->loginEmployee($correo, $clave);
+                if ($res2) {
+                    $data = [
+                        "id" => $res2->ID_Trabajador,
+                        'name'=> $res2->name,
+                        'last_name'=> $res2->last_name,
+                        "Login" => TRUE,
+                        "Role" => $res2->role
+                    ];
+                    $this->session->set_userdata($data);
+                    echo ('2');
+                } else {
+
+                    echo ('0');
+                }
             }
         } else {
 

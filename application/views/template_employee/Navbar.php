@@ -161,7 +161,9 @@
        <li class="nav-item">
          <a href="<?php echo base_url('index.php/');?>Register" class="nav-link">Register</a>
        </li>
-
+       <li class="nav-item">
+         <a href="<?php echo base_url('index.php/');?>Login/cerrar_sesion" class="nav-link">Cerrar Session</a>
+       </li>
 
 
        </li>

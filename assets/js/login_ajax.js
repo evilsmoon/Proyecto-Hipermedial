@@ -11,8 +11,8 @@ function login() {
           console.log(datos)
         if (datos == 1) {
           $(location).attr("href", "Login/screenAdmin");
-        } else if (datos == "2") {
-          $(location).attr("href", "/Login/monitordash");
+        } else if (datos == 2) {
+          $(location).attr("href", "Employee");
         } else {
           msj = "Nick o contraseña erroneos";
           $("#errorLogin").removeAttr("hidden").html(msj);

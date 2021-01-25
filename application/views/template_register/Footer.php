@@ -7,6 +7,9 @@
 <script src="<?php echo base_url('assets/')?>dist/js/adminlte.min.js"></script>
 <script src="<?php echo base_url('assets/')?>mdb/js/mdb.min.js"></script>
 
+<!-- scrips -->
+<script src="<?php echo base_url('assets/')?>js/register_ajax.js"></script>
+
 
 </body>
 </html>
