@@ -36,7 +36,20 @@
                 </div>
               </div>
               <div class="card-body">
-
+                <?php
+                foreach ($get_users->result() as $row) {
+                  echo $row->ID_Usuario;
+                 echo $row->name;
+                 echo $row->last_name;
+                 echo $row->email;
+                 echo $row->password;
+                 echo $row->phone;
+                 echo $row->country;
+                 echo $row->city;
+                 echo $row->status;
+                 echo $row->role;
+                }
+                ?>
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
