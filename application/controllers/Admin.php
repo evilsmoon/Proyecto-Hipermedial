@@ -16,23 +16,22 @@ class Admin extends CI_Controller
 
             redirect(base_url());
         }
-        $this->load->model('M_Users');
+        $this->load->model('M_Admin');
     }
+     public function index()
+     {
+         $id = $this->session->userdata('id');
 
-    // public function index()
-    // {
-    //     $id = $this->session->userdata('id');
-
-    //     if (!$id) {
-    //         redirect(base_url());
-    //     } else {
-    //         $this->load->model('M_Users');
-    //         $data['get_users'] = $this->M_Users->get_users();
-    //         $this->load->view('template_admin/Header');
-    //         $this->load->view('template_admin/Navbar');
-    //         $this->load->view('template_admin/Menu');
-    //         $this->load->view('Admin', $data);
-    //         $this->load->view('template_admin/Footer');
-    //     }
-    // }
+        if (!$id) {
+            redirect(base_url());
+        } else {
+            $this->load->model('M_Admin');
+            $data['get_users'] = $this->M_Admin->get_users();
+            $this->load->view('template_admin/Header');
+            $this->load->view('template_admin/Navbar');
+            $this->load->view('template_admin/Menu');
+            $this->load->view('Admin', $data);
+            $this->load->view('template_admin/Footer');
+        }
+    }
 }

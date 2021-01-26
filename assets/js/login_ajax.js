@@ -10,7 +10,7 @@ function login() {
       success: function (datos) {
           console.log(datos)
         if (datos == 1) {
-          $(location).attr("href", "Login/screenAdmin");
+          $(location).attr("href", "Admin");
         } else if (datos == 2) {
           $(location).attr("href", "Employee");
         } else if (datos == 3) {

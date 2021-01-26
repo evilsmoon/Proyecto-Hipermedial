@@ -9,7 +9,7 @@ class Login extends CI_Controller
     {
         parent::__construct();
         $this->load->model('M_Login');
-        $this->load->model('M_Users');
+        $this->load->model('M_Admin');
         $this->load->model('M_Employee');
     }
 
@@ -27,26 +27,6 @@ class Login extends CI_Controller
     }
 
 
-    public function screenAdmin()
-    {
-        $id = $this->session->userdata('id');
-        $role = $this->session->userdata('Role');
-        if (!$id) {
-
-            redirect(base_url());
-        } elseif ($role == 'ROLE_ADMIN') {
-
-            $data['get_users'] = $this->M_Users->get_users();
-            $this->load->view('template_admin/Header');
-            $this->load->view('template_admin/Navbar');
-            $this->load->view('template_admin/Menu');
-            $this->load->view('Admin', $data);
-            $this->load->view('template_admin/Footer');
-        } else {
-
-            redirect(base_url());
-        }
-    }
 
     public function ingresar()
     {

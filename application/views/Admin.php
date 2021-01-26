@@ -38,7 +38,7 @@
               <div class="card-body">
                 <?php
                 foreach ($get_users->result() as $row) {
-                  echo $row->id_usuario;
+                  echo $row->ID_Usuario;
                 }
                 ?>
               </div>
