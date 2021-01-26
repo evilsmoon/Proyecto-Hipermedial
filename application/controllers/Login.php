@@ -8,11 +8,9 @@ class Login extends CI_Controller
     function __construct()
     {
         parent::__construct();
-
         $this->load->model('M_Login');
         $this->load->model('M_Users');
         $this->load->model('M_Employee');
-        
     }
 
     public function index($page = 'Login')
@@ -21,6 +19,7 @@ class Login extends CI_Controller
         if (!file_exists(APPPATH . 'views/' . $page . '.php')) {
             show_404();
         } else {
+
             $this->load->view('template_login/Header');
             $this->load->view('Login');
             $this->load->view('template_login/Footer');
@@ -71,18 +70,26 @@ class Login extends CI_Controller
             } else {
                 $res2 = $this->M_Login->loginEmployee($correo, $clave);
                 if ($res2) {
-                    $data = [
+                    $data2 = [
                         "id" => $res2->ID_Trabajador,
-                        'name'=> $res2->name,
-                        'last_name'=> $res2->last_name,
                         "Login" => TRUE,
                         "Role" => $res2->role
                     ];
-                    $this->session->set_userdata($data);
+                    $this->session->set_userdata($data2);
                     echo ('2');
                 } else {
 
-                    echo ('0');
+                    $res3 = $this->M_Login->loginClient($correo, $clave);
+
+                    if ($res3) {
+                        $data3 = [
+                            "id" => $res3->ID_Usuario,
+                            "Login" => TRUE,
+                            "Role" => $res3->role
+                        ];
+                        $this->session->set_userdata($data3);
+                        echo ('3');
+                    }
                 }
             }
         } else {

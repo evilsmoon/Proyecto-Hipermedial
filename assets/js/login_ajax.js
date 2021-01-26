@@ -13,6 +13,8 @@ function login() {
           $(location).attr("href", "Login/screenAdmin");
         } else if (datos == 2) {
           $(location).attr("href", "Employee");
+        } else if (datos == 3) {
+          $(location).attr("href", "Client");
         } else {
           msj = "Nick o contraseña erroneos";
           $("#errorLogin").removeAttr("hidden").html(msj);

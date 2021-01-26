@@ -25,13 +25,29 @@ class M_Login extends CI_Model
   public function loginEmployee($uEemail, $uEpassword)
   {
 
-    $result =  $this->db->get_where('trabajadores', array('email' => $uEemail, 'password' => $uEpassword));
-
+    $queryWhere = array('email' => $uEemail, 'password' => $uEpassword);
+    $this->db->where($queryWhere);
+    $result =  $this->db->get('trabajadores');
 
     if ($result->num_rows() == 1) {
       return $result->row();
     } else {
       return false;
     }
+  }
+
+  public function loginClient($uCemail, $uCpassword)
+  {
+
+    $queryWhere = array('email' => $uCemail, 'password' => $uCpassword);
+    $this->db->where($queryWhere);
+    $result =  $this->db->get('clientes');
+
+    if ($result->num_rows() == 1) {
+      return $result->row();
+    } else {
+      return false;
+    }
+
   }
 }

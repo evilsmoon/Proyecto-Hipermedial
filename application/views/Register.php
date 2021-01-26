@@ -4,6 +4,8 @@
   </div>
 
   <div class="content">
+  <div class="alert alert-danger" id="errorLogin" hidden="true"></div>
+
     <!-- Pills navs -->
     <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
       <li class="nav-item" role="presentation">
@@ -22,13 +24,13 @@
 
           <!-- Name input -->
           <div class="form-outline mb-4">
-            <input type="text" id="registerNameE" name='registerNameE' class="form-control" />
+            <input type="text" id="registerNameE" name='registerNameE' class="form-control" placeholder="Name"/>
             <label class="form-label" for="registerNameE">Name</label>
           </div>
 
           <!-- Username input -->
           <div class="form-outline mb-4">
-            <input type="text" id="registerUsernameE" name='registerUsernameE' class="form-control" />
+            <input type="text" id="registerUsernameE" name='registerUsernameE' class="form-control" placeholder=""/>
             <label class="form-label" for="registerUsernameE">Last Name</label>
           </div>
 
@@ -85,14 +87,16 @@
           </div>
 
 
-
           <!-- Checkbox -->
+<!-- 
           <div class="form-check d-flex justify-content-center mb-4">
             <input class="form-check-input me-2" type="checkbox" value="" id="registerCheckE" checked aria-describedby="registerCheckHelpText" />
             <label class="form-check-label" for="registerCheckE">
               I have read and agree to the terms
             </label>
-          </div>
+          </div> 
+        
+        -->
           <!-- Submit button -->
           <button id='btn-register-employee' type="submit" class="btn btn-primary btn-block mb-4">Register</button>
 
@@ -106,65 +110,65 @@
 
 
       <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-        <form>
+        <form id="registerformClient" action="<?php echo base_url();?>index.php/Register/createAccountClient" method="POST">
           <!-- Name input -->
           <div class="form-outline mb-4">
-            <input type="text" id="registerName" class="form-control" />
+            <input type="text" id="registerName" name='registerName' class="form-control" />
             <label class="form-label" for="registerName">Name</label>
           </div>
 
           <!-- Last_name input -->
           <div class="form-outline mb-4">
-            <input type="text" id="registerLast_name" class="form-control" />
+            <input type="text" id="registerLast_name" name='registerLast_name' class="form-control" />
             <label class="form-label" for="registerLast_name">Last Name</label>
           </div>
 
           <!-- Email input -->
           <div class="form-outline mb-4">
-            <input type="email" id="registerEmail" class="form-control" />
+            <input type="email" id="registerEmail" name='registerEmail' class="form-control" />
             <label class="form-label" for="registerEmail">Email</label>
           </div>
 
           <!-- Password input -->
           <div class="form-outline mb-4">
-            <input type="password" id="registerPassword" class="form-control" />
+            <input type="password" id="registerPassword" name='registerPassword' class="form-control" />
             <label class="form-label" for="registerPassword">Password</label>
           </div>
 
           <!-- Repeat Password input -->
           <div class="form-outline mb-4">
-            <input type="password" id="registerRepeatPassword" class="form-control" />
+            <input type="password" id="registerRepeatPassword" name='registerRepeatPassword' class="form-control" />
             <label class="form-label" for="registerRepeatPassword">Repeat password</label>
           </div>
 
           <!-- Phone input -->
           <div class="form-outline mb-4">
-            <input type="text" id="registerPhone" class="form-control" />
+            <input type="text" id="registerPhone" name='registerPhone' class="form-control" />
             <label class="form-label" for="registerPhone">Phone</label>
           </div>
 
           <!-- Country input -->
           <div class="form-outline mb-4">
-            <input type="text" id="registerCountry" class="form-control" />
+            <input type="text" id="registerCountry" name='registerCountry' class="form-control" />
             <label class="form-label" for="registerCountry">Country</label>
           </div>
 
           <!-- City input -->
           <div class="form-outline mb-4">
-            <input type="text" id="registerCity" class="form-control" />
+            <input type="text" id="registerCity" name='registerCity' class="form-control" />
             <label class="form-label" for="registerCity">City</label>
           </div>
 
           <!-- Checkbox -->
-          <div class="form-check d-flex justify-content-center mb-4">
+          <!-- <div class="form-check d-flex justify-content-center mb-4">
             <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked aria-describedby="registerCheckHelpText" />
             <label class="form-check-label" for="registerCheck">
               I have read and agree to the terms
             </label>
-          </div>
+          </div> -->
 
           <!-- Submit button -->
-          <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+          <button d='btn-register-client' type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
           <!-- Register buttons -->
           <div class="text-center">
             <p>Not a member? <a href="#!">Register</a></p>

@@ -154,6 +154,7 @@
            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
          </div>
        </li>
+       <li class="nav-item">
          <a href="<?php echo base_url('index.php/');?>Login/cerrar_sesion" class="nav-link">Cerrar Session</a>
        </li>
 
