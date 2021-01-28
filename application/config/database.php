@@ -72,10 +72,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-	
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '@us-cdbr-east-03.cleardb.com',
+	'hostname' => 'us-cdbr-east-03.cleardb.com',
 	'username' => 'b6c7c106c80455',
 	'password' => 'a52c79a9 ',
 	'database' => 'heroku_a6218c6c5261429',
