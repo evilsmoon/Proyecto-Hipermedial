@@ -7,7 +7,7 @@
              Anything you want
          </div>
          <!-- Default to the left -->
-         <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+         <strong>Copyright &copy; 2021 <a href="<?php echo base_url();?>">Kmellando.com</a>.</strong> All works.
      </footer>
 
      </div>

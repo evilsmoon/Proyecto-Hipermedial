@@ -24,8 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // 
-$config['base_url'] = 'https://kmellando.herokuapp.com/';
-// $config['base_url'] = 'http://localhost/Proyecto-Hipermedial/';
+// $config['base_url'] = 'https://kmellando.herokuapp.com/';
+$config['base_url'] = 'http://localhost/Proyecto-Hipermedial/';
 /*
 |--------------------------------------------------------------------------
 | Index File

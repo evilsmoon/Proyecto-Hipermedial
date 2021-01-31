@@ -15,6 +15,7 @@ class Client extends CI_Controller {
             redirect(base_url());
         }
         $this->load->model('M_Client');
+        
     }
 
     public function index()
@@ -35,6 +36,7 @@ class Client extends CI_Controller {
             redirect(base_url());
         }
     }
+
 
 }
 

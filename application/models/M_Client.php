@@ -22,6 +22,8 @@ class M_Client extends CI_Model {
         }
     }
 
+    
+
 }
 
 /* End of file M_Client.php */
