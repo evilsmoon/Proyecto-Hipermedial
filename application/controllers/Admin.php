@@ -6,7 +6,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Admin extends CI_Controller
 {
 
-
+    
+    
+    
     function __construct()
     {
 
@@ -34,7 +36,7 @@ class Admin extends CI_Controller
         }
     }
 
-    public function getUsers()
+        public function getUsers()
     {
         $data['get_users'] = $this->M_Admin->get_users();
         $this->load->view('template_admin/Header');
