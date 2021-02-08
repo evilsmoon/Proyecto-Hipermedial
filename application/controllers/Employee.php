@@ -44,11 +44,38 @@ class Employee extends CI_Controller
             $data['getUserByID'] = $this->M_Employee->getUserByID($this->session->userdata('id'));
             $this->load->view('template_employee/Header');
             $this->load->view('template_employee/Navbar');
-            $this->load->view('pages_employee/Profile',$data);
+            $this->load->view('pages_employee/Profile', $data);
             $this->load->view('template_employee/Footer');
         } else {
 
             redirect(base_url());
+        }
+    }
+
+    public function setEducationByID()
+    {
+
+        if ($this->input->is_ajax_request()) {
+
+            $input_ID_Trabajador = $this->session->userdata('id');
+            $input_name_curso    = $this->input->post('inputNameCourse');
+            $input_company       = $this->input->post('inputCompany');
+            $input_year          = $this->input->post('inputYear');
+
+            $result = $this->M_Employee->addEducation(
+                $input_ID_Trabajador,
+                $input_name_curso,
+                $input_company,
+                $input_year
+            );
+
+            if ($result) {
+                echo ('1');
+            } else {
+                echo ('0');
+            }
+        } else {
+            $this->profile();
         }
     }
 }

@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'test';
 $query_builder = TRUE;
 
-$db['default'] = array(
+$db['servidor'] = array(
 	'dsn'	=> '',
 	'hostname' => 'us-cdbr-east-03.cleardb.com',
 	'username' => 'b6c7c106c80455',

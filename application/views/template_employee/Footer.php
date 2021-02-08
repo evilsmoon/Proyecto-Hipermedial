@@ -22,6 +22,10 @@
      <!-- AdminLTE App -->
      <script src="<?php echo base_url(); ?>assets/dist/js/adminlte.min.js"></script>
 
+    <!-- Scripts -->
+
+    <script src="<?php echo base_url('assets/'); ?>js/empolyee_ajax.js"></script>
+
      </body>
 
      </html>

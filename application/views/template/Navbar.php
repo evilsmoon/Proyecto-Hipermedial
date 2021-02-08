@@ -2,7 +2,7 @@
  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
    <div class="container">
      <a href="<?php echo base_url('index.php/'); ?>Home" class="navbar-brand">
-       <img src="<?php echo base_url(); ?>assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+       <img src="<?php echo base_url(); ?>assets/img/favico.png" alt="Kmellando Logo" class="brand-image img-circle elevation-4" style="opacity: .8">
        <span class="brand-text font-weight-light">Kmellando</span>
      </a>
 
