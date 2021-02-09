@@ -112,6 +112,31 @@ class M_Employee extends CI_Model
             return false;
         }
     }
+
+
+    public function addMessageAdmin(
+
+        $User,
+        $asunto,
+        $mensaje
+    ) {
+
+        $data = [
+            "ID_Administrador" => 1,
+            "User" => $User,
+            "asunto" => $asunto,
+            "mensaje" => $mensaje,
+
+        ];
+
+        $query = $this->db->insert('mensajeria_admin', $data);
+
+        if ($query) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 /* End of file M_Employee.php */

@@ -116,6 +116,35 @@ class Employee extends CI_Controller
         }
     }
 
+    public function setMessageAdmin()
+    {
+        
+        
+        if ($this->input->is_ajax_request()) {
+
+            $input_ID_Trabajador = $this->session->userdata('id');
+
+            $input_asunto          = $this->input->post('input_year_servicio');
+            $input_mensaje           = $this->input->post('input_description_servicio');
+
+            $result = $this->M_Employee->addMessageAdmin(
+                $input_ID_Trabajador,
+                $input_asunto,
+                $input_mensaje
+            );
+
+            if ($result) {
+                echo ('4');
+            } else {
+                echo ('0');
+            }
+        } else {
+            $this->index();
+        }
+        
+        	
+    }
+
 }
 
 /* End of file Employee.php */
