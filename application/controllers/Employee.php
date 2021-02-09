@@ -93,10 +93,10 @@ class Employee extends CI_Controller
         if ($this->input->is_ajax_request()) {
 
             $input_ID_Trabajador = $this->session->userdata('id');
-            $input_name_proyect    = $this->input->post('inputNameCourse');
-            $input_name_serv       = $this->input->post('inputCompany');
-            $input_des       = $this->input->post('inputCompany');
-            $input_year          = $this->input->post('inputYear');
+            $input_name_proyect  = $this->input->post('input_name_project');
+            $input_name_serv     = $this->input->post('input_name_servicio');
+            $input_des           = $this->input->post('input_description_servicio');
+            $input_year          = $this->input->post('input_year_servicio');
 
             $result = $this->M_Employee->addJobs(
                 $input_ID_Trabajador,
@@ -107,7 +107,7 @@ class Employee extends CI_Controller
             );
 
             if ($result) {
-                echo ('1');
+                echo ('3');
             } else {
                 echo ('0');
             }

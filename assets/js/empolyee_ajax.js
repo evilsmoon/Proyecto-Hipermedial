@@ -9,7 +9,7 @@ function education() {
       data: parametros,
       success: function (datos) {
         if (datos == 1) {
-          $(location).attr("href", "profile");
+          $(location).attr("href", "");
         } else {
           msj = "Nick o contraseña erroneos";
           $("#errorLogin").removeAttr("hidden").html(msj);
@@ -33,7 +33,7 @@ function social() {
       data: parametros,
       success: function (datos) {
         if (datos == 2) {
-          $(location).attr("href", "profile");
+          $(location).attr("href", "");
         } else {
           msj = "Nick o contraseña erroneos";
           $("#errorLogin").removeAttr("hidden").html(msj);
@@ -46,7 +46,7 @@ function social() {
   });
 }
 function jobs() {
-  $("#registerSocial").on("submit", function (e) {
+  $("#registerJobs").on("submit", function (e) {
     e.preventDefault();
     var parametros = $(this).serialize();
     $.ajax({

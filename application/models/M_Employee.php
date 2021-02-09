@@ -89,24 +89,22 @@ class M_Employee extends CI_Model
 
 
     public function addJobs(
-
         $ID_Trabajador,
         $name_project,
         $name_servicio,
         $description_servicio,
-        $year_servicio	
-    )
-    {
+        $year_servicio
+    ) {
 
         $data = [
-            'ID_Trabajador' => $ID_Trabajador,
-            'name_project' => $name_project,
-            'name_servicio' => $name_servicio,
-            'description_servicio' => $description_servicio,
-            'year_servicio' => $year_servicio
+            "ID_Trabajador"        => $ID_Trabajador,
+            "name_trabajo"         => $name_project,
+            "name_servicio"        => $name_servicio,
+            "descrip_servicio"     => $description_servicio,
+            "year_servicio"        => $year_servicio
         ];
 
-        $query = $this->db->insert('proyectos', $data);
+        $query = $this->db->insert('trabajos', $data);
 
         if ($query) {
             return true;
