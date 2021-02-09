@@ -54,7 +54,7 @@
 
             <p class="text-muted">
               <?php
-              if ($getEducationByiDF->num_rows() > 0) {
+              if ($getEducationByiD->num_rows() > 0) {
                 foreach ($getEducationByiD as $row) {
               ?>
                   <span class="tag tag-danger"><?php echo $row->name_curso; ?></span> -
