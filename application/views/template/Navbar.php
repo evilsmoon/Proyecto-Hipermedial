@@ -17,11 +17,12 @@
            <a href="<?php echo base_url('index.php/'); ?>Home" class="nav-link">Inicio</a>
          </li>
          <li class="nav-item">
-           <a href="#" class="nav-link">Contacto</a>
+           <a href="<?php echo base_url('index.php/Home/contac'); ?>" class="nav-link">Quienes Somos</a>
          </li>
          <!-- <li class="nav-item">
            <a href="<?php echo base_url('index.php/'); ?>Home/test" class="nav-link">Test</a>
          </li> -->
+        
 
        </ul>
 

@@ -1,7 +1,8 @@
 <div class="register-box">
   <div class="register-logo">
   <img src="<?php echo base_url('assets/img/lOGO_2.png')?>" alt="logo_2" width="40%">
-    <a href="<?php echo base_url('assets/') ?>index2.html"><b>Registrandome </b>Ando </a>
+    <a href="<?php echo base_url('index.php/Register') ?>"><b>Registrandome </b>Ando </a>
+    
   </div>
 
   <div class="content">
@@ -100,7 +101,7 @@
         -->
           <!-- Submit button -->
           <button id='btn-register-employee' type="submit" class="btn btn-primary btn-block mb-4">Registrase en Kmellando</button>
-
+          <a href="<?php echo base_url('index.php');?>" class="text-center">Volver a inicio</a> 
           <!-- Register buttons -->
           <!-- <div class="text-center">
             <p>Not a member? <a href="#!">Register</a></p>
@@ -115,49 +116,49 @@
           <!-- Name input -->
           <div class="form-outline mb-4">
             <input type="text" id="registerName" name='registerName' class="form-control" />
-            <label class="form-label" for="registerName">Name</label>
+            <label class="form-label" for="registerName">Nombre</label>
           </div>
 
           <!-- Last_name input -->
           <div class="form-outline mb-4">
             <input type="text" id="registerLast_name" name='registerLast_name' class="form-control" />
-            <label class="form-label" for="registerLast_name">Last Name</label>
+            <label class="form-label" for="registerLast_name">Apellido</label>
           </div>
 
           <!-- Email input -->
           <div class="form-outline mb-4">
             <input type="email" id="registerEmail" name='registerEmail' class="form-control" />
-            <label class="form-label" for="registerEmail">Email</label>
+            <label class="form-label" for="registerEmail">Correo</label>
           </div>
 
           <!-- Password input -->
           <div class="form-outline mb-4">
             <input type="password" id="registerPassword" name='registerPassword' class="form-control" />
-            <label class="form-label" for="registerPassword">Password</label>
+            <label class="form-label" for="registerPassword">Contraseña</label>
           </div>
 
           <!-- Repeat Password input -->
           <div class="form-outline mb-4">
             <input type="password" id="registerRepeatPassword" name='registerRepeatPassword' class="form-control" />
-            <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+            <label class="form-label" for="registerRepeatPassword">Repetir Contraseña</label>
           </div>
 
           <!-- Phone input -->
           <div class="form-outline mb-4">
             <input type="text" id="registerPhone" name='registerPhone' class="form-control" />
-            <label class="form-label" for="registerPhone">Phone</label>
+            <label class="form-label" for="registerPhone">Teléfono Celular</label>
           </div>
 
           <!-- Country input -->
           <div class="form-outline mb-4">
             <input type="text" id="registerCountry" name='registerCountry' class="form-control" />
-            <label class="form-label" for="registerCountry">Country</label>
+            <label class="form-label" for="registerCountry">País</label>
           </div>
 
           <!-- City input -->
           <div class="form-outline mb-4">
             <input type="text" id="registerCity" name='registerCity' class="form-control" />
-            <label class="form-label" for="registerCity">City</label>
+            <label class="form-label" for="registerCity">Ciudad</label>
           </div>
 
           <!-- Checkbox -->
@@ -169,10 +170,12 @@
           </div> -->
 
           <!-- Submit button -->
-          <button d='btn-register-client' type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+          <button d='btn-register-client' type="submit" class="btn btn-primary btn-block mb-3">Registrarse en Kmellando</button>
+          
           <!-- Register buttons -->
           <div class="text-center">
-            <p>Not a member? <a href="#!">Register</a></p>
+        
+            <p><a href="<?php echo base_url('index.php');?>" class="text-center">Volver a inicio</a> </p>
           </div>
         </form>
       </div>

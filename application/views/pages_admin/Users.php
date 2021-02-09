@@ -5,15 +5,9 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Collapsed Sidebar</h1>
+            <h1>Administracion de Usuarios Registrados en Kmellando</h1>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Layout</a></li>
-              <li class="breadcrumb-item active">Collapsed Sidebar</li>
-            </ol>
-          </div>
+          
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -26,7 +20,7 @@
             <!-- Default box -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Title</h3>
+                <h3 class="card-title">Usuarios Kmellando</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -36,25 +30,50 @@
                 </div>
               </div>
               <div class="card-body">
-                <?php
-                foreach ($get_users->result() as $row) {
-                  echo $row->ID_Usuario;
-                 echo $row->name;
-                 echo $row->last_name;
-                 echo $row->email;
-                 echo $row->password;
-                 echo $row->phone;
-                 echo $row->country;
-                 echo $row->city;
-                 echo $row->status;
-                 echo $row->role;
-                }
+              
+              <!-- Tabla Prueba -->
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Id de Usuario</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Bloquear</th>
+                  <th>Eliminar</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php 
+                  foreach($get_users as $row){
+                  
+                
                 ?>
+
+                  <tr align="center" style="text-align:center">
+                  <td><?php echo $row -> ID_Usuario; ?></td>
+                  <td align="center"><p><?php echo $row->name;?> </p> 
+                  </td>
+                  <td align="center"><p><?php echo $row->last_name;?> </p> 
+                  </td>
+                  <td align="center"><input type="button" name="view" value="Bloqueo"
+                           class="btn btn-warning btn view_data" />
+                  </td>
+                  <td align="center"><input type="button" name="view" value="Eliminar"
+                           class="btn btn-danger btn view_data" />
+                  </td>
+                  </tr>
+
+
+              <!-- Fin Tabla Prueba -->
+
+              <?php
+                  }
+                
+                ?>
+            </table>
               </div>
               <!-- /.card-body -->
-              <div class="card-footer">
-                Footer
-              </div>
+              
               <!-- /.card-footer-->
             </div>
             <!-- /.card -->

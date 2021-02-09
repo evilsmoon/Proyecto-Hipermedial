@@ -8,11 +8,11 @@
                       <h1 class="m-0 text-dark"> Top 10 <small>Profesionales</small></h1>
                   </div><!-- /.col -->
                   <div class="col-sm-6">
-                      <ol class="breadcrumb float-sm-right">
+                      <!-- <ol class="breadcrumb float-sm-right">
                           <li class="breadcrumb-item"><a href="#">Inicio</a></li>
                           <li class="breadcrumb-item"><a href="#">Layout</a></li>
                           <li class="breadcrumb-item active">Top Navigation</li>
-                      </ol>
+                      </ol> -->
                   </div><!-- /.col -->
               </div><!-- /.row -->
           </div><!-- /.container-fluid -->

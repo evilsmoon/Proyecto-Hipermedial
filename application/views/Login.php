@@ -50,8 +50,14 @@
                 <a href="forgot-password.html">I forgot my password</a>
             </p> -->
             <p class="mb-0">
-                <a href="<?php echo base_url('index.php/Register');?>" class="text-center">Registrate con Nosotros</a>
+               <a href="<?php echo base_url('index.php/Register');?>" class="text-center">Registrate con Nosotros</a>
+                <br>
             </p>
+
+            <div class="text-center">
+        
+            <p><a href="<?php echo base_url('index.php');?>" class="text-center">Volver a inicio</a> </p>
+          </div>
         </div>
         <!-- /.login-card-body -->
     </div>
