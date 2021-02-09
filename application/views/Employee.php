@@ -55,7 +55,7 @@
 
             <p class="text-muted">
               <?php
-              if ($getEducationByiD->num_rows() > 0) {
+              if ($getEducationByiD) {
                 foreach ($getEducationByiD as $row) {
               ?>
 
@@ -74,7 +74,7 @@
             <p class="text-muted">
 
               <?php
-              if ($getSocialByID->num_rows() > 0) {
+              if ($getSocialByID) {
                 foreach ($getSocialByID as $row) {
               ?>
                   <a href="<?php echo $row->url_red_social; ?>" target="_blank"> <?php echo $row->name_red_social; ?> </a>
