@@ -14,12 +14,12 @@ class M_Admin extends CI_Model {
     public function get_users()
 	{
 		$query = $this->db->get('clientes');
-		return $query;
+		return $query -> result();
     }
     public function get_employees()
     {
         $query = $this->db->get('trabajadores');
-        return $query;
+        return $query -> result();
     }
 
 

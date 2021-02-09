@@ -14,14 +14,15 @@
        <!-- Left navbar links -->
        <ul class="navbar-nav">
          <li class="nav-item">
-           <a href="<?php echo base_url('index.php/'); ?>Home" class="nav-link">Home</a>
+           <a href="<?php echo base_url('index.php/'); ?>Home" class="nav-link">Inicio</a>
          </li>
          <li class="nav-item">
-           <a href="#" class="nav-link">Contact</a>
+           <a href="<?php echo base_url('index.php/Home/contac'); ?>" class="nav-link">Quienes Somos</a>
          </li>
-         <li class="nav-item">
+         <!-- <li class="nav-item">
            <a href="<?php echo base_url('index.php/'); ?>Home/test" class="nav-link">Test</a>
-         </li>
+         </li> -->
+        
 
        </ul>
 
@@ -30,11 +31,11 @@
          <!-- Messages Dropdown Menu -->
 
          <li class="nav-item">
-           <a href="<?php echo base_url('index.php/'); ?>Login" class="nav-link"> Login</a>
+           <a href="<?php echo base_url('index.php/'); ?>Login" class="nav-link"> Iniciar Sesión</a>
 
          </li>
          <li class="nav-item">
-           <a href="<?php echo base_url('index.php/'); ?>Register" class="nav-link">Register</a>
+           <a href="<?php echo base_url('index.php/'); ?>Register" class="nav-link">Registrarse</a>
          </li>
        </ul>
      </div>

@@ -2,8 +2,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.0.5
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
+    <strong>Copyright &copy; 2021 <a href="<?php echo base_url();?>">Kmellando.com</a>.</strong> 
   </footer>
 
 </div>
