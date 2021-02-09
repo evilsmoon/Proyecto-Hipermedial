@@ -32,28 +32,28 @@
               <!-- About Me Box -->
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">About Me</h3>
+                  <h3 class="card-title">Acerca de mi </h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <strong><i class="fas fa-book mr-1"></i> Education</strong>
+                  <strong><i class="fas fa-book mr-1"></i> Educación</strong>
 
                   <hr>
 
-                  <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
+                  <strong><i class="fas fa-map-marker-alt mr-1"></i> Ubicación</strong>
 
                   <p class="text-muted"><?php echo $user->country; ?>,<?php echo $user->city; ?></p>
 
                   <hr>
 
-                  <strong><i class="far fa-file-alt mr-1"></i>Description</strong>
+                  <strong><i class="far fa-file-alt mr-1"></i>Descripción</strong>
 
                   <p class="text-muted"><?php echo $user->description; ?>.</p>
                   <hr>
                 <?php
               }
                 ?>
-                <strong><i class="fas fa-pencil-alt mr-1"></i> Skills</strong>
+                <strong><i class="fas fa-pencil-alt mr-1"></i> Habilidades</strong>
 
                 <p class="text-muted">
                   <?php
@@ -68,14 +68,14 @@
 
                 </p>
                 <hr>
-                <strong><i class="fas fa-comment-alt mr-1"></i> Social</strong>
+                <strong><i class="fas fa-comment-alt mr-1"></i> Redes Sociales</strong>
                 <p class="text-muted">
                 
                 <?php
                   foreach ($getSocialByID as $row) {
                   ?>
-                    <span class="tag tag-danger"><?php echo $row->name_red_social; ?></span> -<span class="tag tag-danger"><?php echo $row->url_red_social; ?></span>
-                <?php
+                      <a href="<?php echo $row->url_red_social; ?>" target="_blank" > <?php echo $row->name_red_social; ?> </a>
+                                <?php
                   }
                   ?>
                 
@@ -95,9 +95,9 @@
             <div class="card">
               <div class="card-header p-2">
                 <ul class="nav nav-pills">
-                  <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Activity</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Timeline</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Reseñas</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Quejas</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Modificar Perfil</a></li>
                 </ul>
               </div><!-- /.card-header -->
               <div class="card-body">
@@ -106,7 +106,8 @@
                     <!-- Post -->
                     <div class="post">
                       <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user1-128x128.jpg" alt="user image">
+                        <img class="img-circle img-bordered-sm" src="https://picsum.photos/id/237/200/300" alt="user image">
+                       
                         <span class="username">
                           <a href="#">Jonathan Burke Jr.</a>
                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
@@ -138,7 +139,7 @@
                     <!-- Post -->
                     <div class="post clearfix">
                       <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user7-128x128.jpg" alt="User Image">
+                      <img class="img-circle img-bordered-sm" src="https://picsum.photos/id/281/200/300" alt="user image">
                         <span class="username">
                           <a href="#">Sarah Ross</a>
                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
@@ -168,37 +169,20 @@
                     <!-- Post -->
                     <div class="post">
                       <div class="user-block">
-                        <img class="img-circle img-bordered-sm" src="../../dist/img/user6-128x128.jpg" alt="User Image">
+                      <img class="img-circle img-bordered-sm" src="https://picsum.photos/id/235/200/300" alt="user image">
                         <span class="username">
                           <a href="#">Adam Jones</a>
                           <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
                         </span>
                         <span class="description">Posted 5 photos - 5 days ago</span>
                       </div>
-                      <!-- /.user-block -->
-                      <div class="row mb-3">
-                        <div class="col-sm-6">
-                          <img class="img-fluid" src="../../dist/img/photo1.png" alt="Photo">
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-sm-6">
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <img class="img-fluid mb-3" src="../../dist/img/photo2.png" alt="Photo">
-                              <img class="img-fluid" src="../../dist/img/photo3.jpg" alt="Photo">
-                            </div>
-                            <!-- /.col -->
-                            <div class="col-sm-6">
-                              <img class="img-fluid mb-3" src="../../dist/img/photo4.jpg" alt="Photo">
-                              <img class="img-fluid" src="../../dist/img/photo1.png" alt="Photo">
-                            </div>
-                            <!-- /.col -->
-                          </div>
-                          <!-- /.row -->
-                        </div>
-                        <!-- /.col -->
-                      </div>
-                      <!-- /.row -->
+                      <p>
+                        Lorem ipsum represents a long-held tradition for designers,
+                        typographers and the like. Some people hate it and argue for
+                        its demise, but others ignore the hate as they create awesome
+                        tools to help create filler text for everyone from bacon lovers
+                        to Charlie Sheen fans.
+                      </p>
 
                       <p>
                         <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Share</a>
@@ -313,42 +297,44 @@
 
                   <div class="tab-pane" id="settings">
                     <ul class="nav nav-pills">
-                      <li class="nav-item"><a class="nav-link active" href="#education" data-toggle="tab">Education</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#social" data-toggle="tab">Social</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#jobs" data-toggle="tab">Jobs</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="#education" data-toggle="tab">Formación Académica/Profesional</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#social" data-toggle="tab">Redes Sociales</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#jobs" data-toggle="tab">Trabajos Realizados</a></li>
                     </ul>
 
+                    <!-- FORMULARIO DE EDUCACION -->
                     <div class="card-body">
                       <div class="tab-content">
+                        <!-- FORMULARIO DE EDUCACION -->
                         <div class="active tab-pane" id="education">
                           <form class="form-horizontal" id="registerEducation" action="<?php echo base_url(); ?>index.php/Employee/setEducationByID" method="POST">
                             <div class="form-group row">
-                              <label for="inputNameCourse " class="col-sm-2 col-form-label">Name Course</label>
+                              <label for="inputNameCourse " class="col-sm-2 col-form-label">Nombre del Curso / Título</label>
                               <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputNameCourse" name="inputNameCourse" placeholder="Name Course">
                               </div>
                             </div>
                             <div class="form-group row">
-                              <label for="inputCompany" class="col-sm-2 col-form-label">Company</label>
+                              <label for="inputCompany" class="col-sm-2 col-form-label">Compañía / Inst. Educativa</label>
                               <div class="col-sm-10">
                                 <input type="text" class="form-control" id="inputCompany" name="inputCompany" placeholder="Company">
                               </div>
                             </div>
                             <div class="form-group row">
-                              <label for="inputYear" class="col-sm-2 col-form-label">year</label>
+                              <label for="inputYear" class="col-sm-2 col-form-label">Año</label>
                               <div class="col-sm-10">
                                 <input type="number" class="form-control" id="inputYear" name="inputYear" placeholder="year">
                               </div>
                             </div>
                             <div class="form-group row">
                               <div class="offset-sm-2 col-sm-10">
-                                <button type="submit" class="btn btn-danger">Submit</button>
+                                <button type="submit" class="btn btn-danger">Guardar</button>
                               </div>
                             </div>
                           </form>
                         </div>
 
-
+                      <!-- FORMULARIO DE REDES SOCIALES -->
                         <div class="tab-pane" id="social">
                         <form class="form-horizontal" id="registerSocial" action="<?php echo base_url(); ?>index.php/Employee/setSocialByID" method="POST">
                             <div class="form-group row">
@@ -371,31 +357,45 @@
                             </div>
                           </form>
                         </div>
-
+<!-- FORMULARIO DE TRABAJOS?
+                  - METER
+                  $ID_Trabajador,
+                   $name_project,
+                  $name_servicio,
+                  $description_servicio,
+                  $year_servicio    0
+-->
                         <div class="tab-pane" id="jobs">
                           <form class="form-horizontal">
                             <div class="form-group row">
-                              <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                              <label for="inputName" class="col-sm-2 col-form-label">Nombre del Proyecto</label>
                               <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputName" placeholder="Name">
+                                <input type="text" class="form-control" id="name_project"  name="name_project"placeholder="Nombre del Proyecto">
                               </div>
                             </div>
                             <div class="form-group row">
-                              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                              <label for="inputService" class="col-sm-2 col-form-label">Servicio</label>
                               <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                                <input type="text" class="form-control" id="name_servicio" name="name_servicio" placeholder="Servicio">
                               </div>
                             </div>
                             <div class="form-group row">
-                              <label for="inputName2" class="col-sm-2 col-form-label">Name</label>
+                              <label for="inputDecript" class="col-sm-2 col-form-label">Descripción del Trabajo</label>
                               <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputName2" placeholder="Name">
+                                <input type="text" class="form-control" id="description_servicio" name="description_servicio" placeholder="Descripción">
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label for="inputYear" class="col-sm-2 col-form-label">Año de Realización</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" id="year_servicio" name="year_servicio" placeholder="Año">
                               </div>
                             </div>
 
                             <div class="form-group row">
                               <div class="offset-sm-2 col-sm-10">
-                                <button type="submit" class="btn btn-danger">Submit</button>
+                                <button type="submit" class="btn btn-danger">Guardar</button>
                               </div>
                             </div>
                           </form>
