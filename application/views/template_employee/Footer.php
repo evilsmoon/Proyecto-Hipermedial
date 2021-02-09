@@ -4,10 +4,10 @@
      <footer class="main-footer">
          <!-- To the right -->
          <div class="float-right d-none d-sm-inline">
-             Anything you want
+             Programación Hipermedial - UPS
          </div>
          <!-- Default to the left -->
-         <strong>Copyright &copy; 2021 <a href="<?php echo base_url();?>">Kmellando.com</a>.</strong> All works.
+         <strong>Copyright &copy; 2021 <a href="<?php echo base_url();?>">Kmellando.com</a>.</strong> 
      </footer>
 
      </div>
