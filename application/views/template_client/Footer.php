@@ -25,7 +25,7 @@
 
 
      <script src="<?php echo base_url('assets/'); ?>js/client_ajax.js"></script>
-
+     <script src="<?php echo base_url('assets/'); ?>js/empolyee_ajax.js"></script>
      </body>
 
      </html>

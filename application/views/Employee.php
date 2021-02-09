@@ -210,7 +210,7 @@
 
                 <div class="card-header">
                   <h1 class="card-title">Escribe tu Queja Dirigida a los Administradores de Kmellando</h1>
-                </div>
+                </div>  
                 <div class="col-md-9">
 
                   <div class="card card-primary card-outline">
