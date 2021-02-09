@@ -87,7 +87,6 @@
 
 
       </div>
-
       <!-- /.col -->
       <div class="col-md-9">
         <div class="card">
@@ -100,11 +99,12 @@
           </div><!-- /.card-header -->
           <div class="card-body">
             <div class="tab-content">
+
               <div class="active tab-pane" id="activity">
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
-                    <img class="img-circle img-bordered-sm" src="https://picsum.photos/id/237/200/300" alt="user image">
+                    <img class="img-circle img-bordered-sm" src="<?php echo base_url(); ?>assets/dist/img/user1-128x128.jpg" alt="user image">
 
                     <span class="username">
                       <a href="#">Jonathan Burke Jr.</a>
@@ -135,9 +135,9 @@
                 </div>
                 <!-- /.post -->
                 <!-- Post -->
-                <div class="post clearfix">
+                <div class="post">
                   <div class="user-block">
-                    <img class="img-circle img-bordered-sm" src="https://picsum.photos/id/281/200/300" alt="user image">
+                    <img class="img-circle img-bordered-sm" src="<?php echo base_url(); ?>assets/dist/img/user1-128x128.jpg" alt="user image">
                     <span class="username">
                       <a href="#">Sarah Ross</a>
                       <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
@@ -167,7 +167,7 @@
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
-                    <img class="img-circle img-bordered-sm" src="https://picsum.photos/id/235/200/300" alt="user image">
+                    <img class="img-circle img-bordered-sm" src="<?php echo base_url(); ?>assets/dist/img/user1-128x128.jpg" alt="user image">
                     <span class="username">
                       <a href="#">Adam Jones</a>
                       <a href="#" class="float-right btn-tool"><i class="fas fa-times"></i></a>
@@ -199,108 +199,56 @@
               <!-- /.tab-pane -->
               <div class="tab-pane" id="timeline">
                 <!-- The timeline -->
-                <div class="timeline timeline-inverse">
-                  <!-- timeline time label -->
-                  <div class="time-label">
-                    <span class="bg-danger">
-                      10 Feb. 2014
-                    </span>
-                  </div>
-                  <!-- /.timeline-label -->
-                  <!-- timeline item -->
-                  <div>
-                    <i class="fas fa-envelope bg-primary"></i>
 
-                    <div class="timeline-item">
-                      <span class="time"><i class="far fa-clock"></i> 12:05</span>
-
-                      <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-
-                      <div class="timeline-body">
-                        Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-                        weebly ning heekya handango imeem plugg dopplr jibjab, movity
-                        jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-                        quora plaxo ideeli hulu weebly balihoo...
-                      </div>
-                      <div class="timeline-footer">
-                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
-                        <a href="#" class="btn btn-danger btn-sm">Delete</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END timeline item -->
-                  <!-- timeline item -->
-                  <div>
-                    <i class="fas fa-user bg-info"></i>
-
-                    <div class="timeline-item">
-                      <span class="time"><i class="far fa-clock"></i> 5 mins ago</span>
-
-                      <h3 class="timeline-header border-0"><a href="#">Sarah Young</a> accepted your friend request
-                      </h3>
-                    </div>
-                  </div>
-                  <!-- END timeline item -->
-                  <!-- timeline item -->
-                  <div>
-                    <i class="fas fa-comments bg-warning"></i>
-
-                    <div class="timeline-item">
-                      <span class="time"><i class="far fa-clock"></i> 27 mins ago</span>
-
-                      <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-
-                      <div class="timeline-body">
-                        Take me to your leader!
-                        Switzerland is small and neutral!
-                        We are more like Germany, ambitious and misunderstood!
-                      </div>
-                      <div class="timeline-footer">
-                        <a href="#" class="btn btn-warning btn-flat btn-sm">View comment</a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END timeline item -->
-                  <!-- timeline time label -->
-                  <div class="time-label">
-                    <span class="bg-success">
-                      3 Jan. 2014
-                    </span>
-                  </div>
-                  <!-- /.timeline-label -->
-                  <!-- timeline item -->
-                  <div>
-                    <i class="fas fa-camera bg-purple"></i>
-
-                    <div class="timeline-item">
-                      <span class="time"><i class="far fa-clock"></i> 2 days ago</span>
-
-                      <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-
-                      <div class="timeline-body">
-                        <img src="http://placehold.it/150x100" alt="...">
-                        <img src="http://placehold.it/150x100" alt="...">
-                        <img src="http://placehold.it/150x100" alt="...">
-                        <img src="http://placehold.it/150x100" alt="...">
-                      </div>
-                    </div>
-                  </div>
-                  <!-- END timeline item -->
-                  <div>
-                    <i class="far fa-clock bg-gray"></i>
-                  </div>
+                <div class="card-header">
+                  <h1 class="card-title">Escribe tu Queja Dirigida a los Administradores de Kmellando</h1>
                 </div>
+                <div class="col-md-9">
+
+                  <div class="card card-primary card-outline">
+
+                  <form class="form-horizontal" id="registerMessage" action="<?php echo base_url(); ?>index.php/Employee/setMessageAdmin" method="POST">
+
+                      <!-- /.card-header -->
+                      <div class="card-body">
+                        <!-- <div class="form-group">
+                        <input class="form-control" placeholder="Para:">
+                      </div> -->
+                        <div class="form-group">
+                          <input class="form-control" name="input_asunto" id="input_asunto" type="text" placeholder="Asunto:">
+                        </div>
+                        <div class="form-group">
+                          <textarea id="compose-textarea"  name="input_mensaje" id="input_mensaje" class="form-control" style="height: 300px"></textarea>
+                        </div>
+                      </div>
+                      <!-- /.card-body -->
+                      <div class="card-footer">
+                        <div class="float-right">
+
+                          <button type="submit" class="btn btn-primary"><i class="far fa-envelope"></i> Enviar</button>
+                        </div>
+                        <button type="reset" class="btn btn-default"><i class="fas fa-times"></i> Descartar</button>
+                      </div>
+                    </form>
+                    <!-- /.card-footer -->
+                  </div>
+                  <!-- /.card -->
+                </div>
+
+
+
+
               </div>
               <!-- /.tab-pane -->
-
               <div class="tab-pane" id="settings">
-                <ul class="nav nav-pills">
-                  <li class="nav-item"><a class="nav-link active" href="#education" data-toggle="tab">Formación Académica/Profesional</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#social" data-toggle="tab">Redes Sociales</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#jobs" data-toggle="tab">Trabajos Realizados</a></li>
-                </ul>
 
-                <!-- FORMULARIO DE EDUCACION -->
+                <div class="card-header p-2">
+                  <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link active" href="#education" data-toggle="tab">Formación Académica/Profesional</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#social" data-toggle="tab">Redes Sociales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#jobs" data-toggle="tab">Trabajos Realizados</a></li>
+                  </ul>
+                </div>
                 <div class="card-body">
                   <div class="tab-content">
                     <!-- FORMULARIO DE EDUCACION -->
@@ -390,23 +338,23 @@
                           </div>
                         </div>
                       </form>
-
                     </div>
-
                   </div>
-
                 </div>
                 <!-- /.tab-pane -->
               </div>
               <!-- /.tab-content -->
-            </div><!-- /.card-body -->
-          </div>
-          <!-- /.nav-tabs-custom -->
+
+            </div>
+
+          </div><!-- /.card-body -->
         </div>
-        <!-- /.col -->
+        <!-- /.nav-tabs-custom -->
       </div>
-      <!-- /.row -->
-    </div><!-- /.container-fluid -->
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
 </section>
 <!-- /.content -->
 </div>

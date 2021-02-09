@@ -26,7 +26,7 @@ class Client extends CI_Controller {
 
             redirect(base_url());
         } elseif ($role == 'ROLE_Client') {
-            $resp['getUserByID'] = $this->M_Client->getUserByID($this->session->userdata('id'));
+            $resp['get_employeesAtUser'] = $this->M_Client->get_employeesAtUser();
             $this->load->view('template_client/Header');
             $this->load->view('template_client/Navbar');
             $this->load->view('Client.php', $resp);
@@ -49,6 +49,25 @@ class Client extends CI_Controller {
             $this->load->view('template_client/Header');
             $this->load->view('template_client/Navbar');
             $this->load->view('pages_client/message');
+            $this->load->view('template_client/Footer');
+        } else {
+
+            redirect(base_url());
+        }
+    }
+
+    public function getUserByIDEmploye($IDE)
+    {
+        $id = $this->session->userdata('id');
+        $role = $this->session->userdata('Role');
+        if (!$id) {
+
+            redirect(base_url());
+        } elseif ($role == 'ROLE_Client') {
+            $resp['getUserByID'] = $this->M_Client->getUserByIDEmployee($IDE);
+            $this->load->view('template_client/Header');
+            $this->load->view('template_client/Navbar');
+            $this->load->view('pages_client/profileEmployee',$resp);
             $this->load->view('template_client/Footer');
         } else {
 

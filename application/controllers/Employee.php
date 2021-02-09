@@ -124,8 +124,8 @@ class Employee extends CI_Controller
 
             $input_ID_Trabajador = $this->session->userdata('id');
 
-            $input_asunto          = $this->input->post('input_year_servicio');
-            $input_mensaje           = $this->input->post('input_description_servicio');
+            $input_asunto            = $this->input->post('input_asunto');
+            $input_mensaje           = $this->input->post('input_mensaje');
 
             $result = $this->M_Employee->addMessageAdmin(
                 $input_ID_Trabajador,

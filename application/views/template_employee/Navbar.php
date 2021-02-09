@@ -14,7 +14,7 @@
        <!-- Left navbar links -->
        <ul class="navbar-nav">
          <li class="nav-item">
-           <a href="<?php echo base_url('index.php/Employee');?>" class="nav-link">Home</a>
+           <a href="<?php echo base_url('index.php/Employee');?>" class="nav-link">Inicio</a>
          </li>
 
        </ul>
@@ -24,7 +24,7 @@
      <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
 
        </li>
-         <a href="<?php echo base_url('index.php/');?>Login/cerrar_sesion" class="nav-link">Cerrar Session</a>
+         <a href="<?php echo base_url('index.php/');?>Login/cerrar_sesion" class="nav-link">Cerrar Sesion</a>
        </li>
 
      </ul>
