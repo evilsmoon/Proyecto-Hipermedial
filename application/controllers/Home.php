@@ -13,15 +13,17 @@ class Home extends CI_Controller
         parent::__construct();
         $this->load->model('M_Test');
         $this->load->library('form_validation');
+        $this->load->model('M_Client');
     }
 
 
     public function index()
     {
 
+        $resp['get_employeesAtUser'] = $this->M_Client->get_employeesAtUser();
         $this->load->view('template/Header');
         $this->load->view('template/Navbar');
-        $this->load->view('Home');
+        $this->load->view('Home', $resp);
         $this->load->view('template/Footer');
     }
 
