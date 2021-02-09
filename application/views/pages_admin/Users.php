@@ -44,7 +44,7 @@
                   </thead>
                   <tbody>
                     <?php
-                    if ($get_users->num_rows() > 0) {
+                    if ($get_users) {
                       foreach ($get_users as $row) {
 
 
