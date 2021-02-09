@@ -86,6 +86,34 @@ class M_Employee extends CI_Model
             return false;
         }
     }
+
+
+    public function addJobs(
+
+        $ID_Trabajador,
+        $name_project,
+        $name_servicio,
+        $description_servicio,
+        $year_servicio	
+    )
+    {
+
+        $data = [
+            'ID_Trabajador' => $ID_Trabajador,
+            'name_project' => $name_project,
+            'name_servicio' => $name_servicio,
+            'description_servicio' => $description_servicio,
+            'year_servicio' => $year_servicio
+        ];
+
+        $query = $this->db->insert('proyectos', $data);
+
+        if ($query) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 /* End of file M_Employee.php */

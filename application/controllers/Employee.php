@@ -63,6 +63,7 @@ class Employee extends CI_Controller
         }
     }
 
+    
     public function setSocialByID()
     {
         if ($this->input->is_ajax_request()) {
@@ -85,6 +86,36 @@ class Employee extends CI_Controller
             $this->index();
         }
     }
+
+    public function setJobsByID()
+    {
+
+        if ($this->input->is_ajax_request()) {
+
+            $input_ID_Trabajador = $this->session->userdata('id');
+            $input_name_proyect    = $this->input->post('inputNameCourse');
+            $input_name_serv       = $this->input->post('inputCompany');
+            $input_des       = $this->input->post('inputCompany');
+            $input_year          = $this->input->post('inputYear');
+
+            $result = $this->M_Employee->addJobs(
+                $input_ID_Trabajador,
+                $input_name_proyect,
+                $input_name_serv,
+                $input_des,
+                $input_year
+            );
+
+            if ($result) {
+                echo ('1');
+            } else {
+                echo ('0');
+            }
+        } else {
+            $this->index();
+        }
+    }
+
 }
 
 /* End of file Employee.php */

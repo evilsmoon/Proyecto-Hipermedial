@@ -37,6 +37,25 @@ class Client extends CI_Controller {
         }
     }
 
+    public function message()
+    {
+        $id = $this->session->userdata('id');
+        $role = $this->session->userdata('Role');
+        if (!$id) {
+
+            redirect(base_url());
+        } elseif ($role == 'ROLE_Client') {
+            // $resp['getUserByID'] = $this->M_Client->getUserByID($this->session->userdata('id'));
+            $this->load->view('template_client/Header');
+            $this->load->view('template_client/Navbar');
+            $this->load->view('pages_client/message');
+            $this->load->view('template_client/Footer');
+        } else {
+
+            redirect(base_url());
+        }
+    }
+
 
 }
 
