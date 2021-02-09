@@ -91,7 +91,7 @@
                 <?php
                   foreach ($getSocialByID as $row) {
                   ?>
-                    <span class="tag tag-danger"><?php echo $row->name_curso; ?></span> -
+                    <span class="tag tag-danger"><?php echo $row->name_red_social; ?></span> -
                 <?php
                   }
                   ?>

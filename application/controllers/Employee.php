@@ -44,7 +44,6 @@ class Employee extends CI_Controller
             $data['getUserByID'] = $this->M_Employee->getUserByID($this->session->userdata('id'));
             $data['getEducationByiD'] = $this->M_Employee->getEducationByiD($this->session->userdata('id'));
             $data['getSocialByID'] = $this->M_Employee->getSocialByID($this->session->userdata('id'));
-            $data['getSocialByID'] = $this->M_Employee->getSocialByID($this->session->userdata('id'));
             $this->load->view('template_employee/Header');
             $this->load->view('template_employee/Navbar');
             $this->load->view('pages_employee/Profile', $data);
