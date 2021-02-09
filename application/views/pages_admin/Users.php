@@ -7,7 +7,7 @@
           <div class="col-sm-6">
             <h1>Administracion de Usuarios Registrados en Kmellando</h1>
           </div>
-          
+
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -30,50 +30,57 @@
                 </div>
               </div>
               <div class="card-body">
-              
-              <!-- Tabla Prueba -->
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Id de Usuario</th>
-                  <th>Nombre</th>
-                  <th>Apellido</th>
-                  <th>Bloquear</th>
-                  <th>Eliminar</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php 
-                  foreach($get_users as $row){
-                  
-                
-                ?>
 
-                  <tr align="center" style="text-align:center">
-                  <td><?php echo $row -> ID_Usuario; ?></td>
-                  <td align="center"><p><?php echo $row->name;?> </p> 
-                  </td>
-                  <td align="center"><p><?php echo $row->last_name;?> </p> 
-                  </td>
-                  <td align="center"><input type="button" name="view" value="Bloqueo"
-                           class="btn btn-warning btn view_data" />
-                  </td>
-                  <td align="center"><input type="button" name="view" value="Eliminar"
-                           class="btn btn-danger btn view_data" />
-                  </td>
-                  </tr>
+                <!-- Tabla Prueba -->
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Id de Usuario</th>
+                      <th>Nombre</th>
+                      <th>Apellido</th>
+                      <th>Bloquear</th>
+                      <th>Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if ($get_users->num_rows() > 0) {
+                      foreach ($get_users as $row) {
 
 
-              <!-- Fin Tabla Prueba -->
+                    ?>
 
-              <?php
-                  }
-                
-                ?>
-            </table>
+                        <tr align="center" style="text-align:center">
+                          <td><?php echo $row->ID_Usuario; ?></td>
+                          <td align="center">
+                            <p><?php echo $row->name; ?> </p>
+                          </td>
+                          <td align="center">
+                            <p><?php echo $row->last_name; ?> </p>
+                          </td>
+                          <td align="center"><input type="button" name="view" value="Bloqueo" class="btn btn-warning btn view_data" />
+                          </td>
+                          <td align="center"><input type="button" name="view" value="Eliminar" class="btn btn-danger btn view_data" />
+                          </td>
+                        </tr>
+
+
+                        <!-- Fin Tabla Prueba -->
+
+                      <?php
+                      }
+                    } else {
+                      ?>
+                      <td><?php echo 'No data' ?></td>
+                    <?php
+
+                    }
+
+                    ?>
+                </table>
               </div>
               <!-- /.card-body -->
-              
+
               <!-- /.card-footer-->
             </div>
             <!-- /.card -->

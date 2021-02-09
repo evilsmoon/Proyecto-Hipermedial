@@ -55,12 +55,16 @@
 
             <p class="text-muted">
               <?php
-              foreach ($getEducationByiD as $row) {
+              if ($getEducationByiD->num_rows() > 0) {
+                foreach ($getEducationByiD as $row) {
               ?>
 
 
-                <span class="tag tag-danger"><?php echo $row->name_curso; ?></span> -
+                  <span class="tag tag-danger"><?php echo $row->name_curso; ?></span> -
               <?php
+                }
+              } else {
+                echo '<span tag tag-danger> No data Actualizar perfil</span>';
               }
               ?>
 
@@ -70,10 +74,14 @@
             <p class="text-muted">
 
               <?php
-              foreach ($getSocialByID as $row) {
+              if ($getSocialByID->num_rows() > 0) {
+                foreach ($getSocialByID as $row) {
               ?>
-                <a href="<?php echo $row->url_red_social; ?>" target="_blank"> <?php echo $row->name_red_social; ?> </a>
+                  <a href="<?php echo $row->url_red_social; ?>" target="_blank"> <?php echo $row->name_red_social; ?> </a>
               <?php
+                }
+              } else {
+                echo '<span> No data Actualizar perfil</span>';
               }
               ?>
 
@@ -207,7 +215,7 @@
 
                   <div class="card card-primary card-outline">
 
-                  <form class="form-horizontal" id="registerMessage" action="<?php echo base_url(); ?>index.php/Employee/setMessageAdmin" method="POST">
+                    <form class="form-horizontal" id="registerMessage" action="<?php echo base_url(); ?>index.php/Employee/setMessageAdmin" method="POST">
 
                       <!-- /.card-header -->
                       <div class="card-body">
