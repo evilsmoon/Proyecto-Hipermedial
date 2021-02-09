@@ -22,37 +22,19 @@ class Employee extends CI_Controller
 
             redirect(base_url());
         } elseif ($role == 'ROLE_Employee') {
-            $resp['getUserByID'] = $this->M_Employee->getUserByID($this->session->userdata('id'));
-            $this->load->view('template_employee/Header');
-            $this->load->view('template_employee/Navbar');
-            $this->load->view('Employee', $resp);
-            $this->load->view('template_employee/Footer');
-        } else {
-
-            redirect(base_url());
-        }
-    }
-
-    public function profile()
-    {
-        $id = $this->session->userdata('id');
-        $role = $this->session->userdata('Role');
-        if (!$id) {
-
-            redirect(base_url());
-        } elseif ($role == 'ROLE_Employee') {
             $data['getUserByID'] = $this->M_Employee->getUserByID($this->session->userdata('id'));
             $data['getEducationByiD'] = $this->M_Employee->getEducationByiD($this->session->userdata('id'));
             $data['getSocialByID'] = $this->M_Employee->getSocialByID($this->session->userdata('id'));
             $this->load->view('template_employee/Header');
             $this->load->view('template_employee/Navbar');
-            $this->load->view('pages_employee/Profile', $data);
+            $this->load->view('Employee', $data);
             $this->load->view('template_employee/Footer');
         } else {
 
             redirect(base_url());
         }
     }
+
 
     public function setEducationByID()
     {
@@ -77,7 +59,7 @@ class Employee extends CI_Controller
                 echo ('0');
             }
         } else {
-            $this->profile();
+            $this->index();
         }
     }
 
@@ -100,7 +82,7 @@ class Employee extends CI_Controller
                 echo ('0');
             }
         } else {
-            $this->profile();
+            $this->index();
         }
     }
 }
