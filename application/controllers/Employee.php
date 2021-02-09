@@ -42,6 +42,9 @@ class Employee extends CI_Controller
             redirect(base_url());
         } elseif ($role == 'ROLE_Employee') {
             $data['getUserByID'] = $this->M_Employee->getUserByID($this->session->userdata('id'));
+            $data['getEducationByiD'] = $this->M_Employee->getEducationByiD($this->session->userdata('id'));
+            $data['getSocialByID'] = $this->M_Employee->getSocialByID($this->session->userdata('id'));
+            $data['getSocialByID'] = $this->M_Employee->getSocialByID($this->session->userdata('id'));
             $this->load->view('template_employee/Header');
             $this->load->view('template_employee/Navbar');
             $this->load->view('pages_employee/Profile', $data);
@@ -71,6 +74,29 @@ class Employee extends CI_Controller
 
             if ($result) {
                 echo ('1');
+            } else {
+                echo ('0');
+            }
+        } else {
+            $this->profile();
+        }
+    }
+
+    public function setSocialByID()
+    {
+        if ($this->input->is_ajax_request()) {
+            $input_ID_trabajador  = $this->session->userdata('id');
+            $input_name_social    = $this->input->post('inputNameSocial');
+            $input_Url            = $this->input->post('inputUrl');
+
+            $result = $this->M_Employee->addSocial(
+                $input_ID_trabajador,
+                $input_name_social,
+                $input_Url
+            );
+
+            if ($result) {
+                echo ('2');
             } else {
                 echo ('0');
             }

@@ -23,18 +23,62 @@ class M_Employee extends CI_Model
         }
     }
 
-    public function addEducation($ID_Trabajador,$name_curso,$company,$year)
+    public function getEducationByiD($ID)
+    {
+        $this->db->where('ID_Trabajador', $ID);
+
+        $resp = $this->db->get('formacion ');
+
+        if ($resp->num_rows() >= 1) {
+            return $resp->result();
+        } else {
+            return false;
+        }
+    }
+
+    public function getSocialByID($ID)
+    {
+        $this->db->where('ID_Trabajador', $ID);
+
+        $resp = $this->db->get('redes_sociales');
+
+        if ($resp->num_rows() >= 1) {
+            return $resp->result();
+        } else {
+            return false;
+        }
+    }
+    public function addEducation($ID_Trabajador, $name_curso, $company, $year)
     {
 
-        $data =[
+        $data = [
 
             "ID_Trabajador" => $ID_Trabajador,
             "name_curso "   => $name_curso,
             "company"       => $company,
             "yaer"          => $year,
-            
+
         ];
         $query = $this->db->insert('formacion', $data);
+
+        if ($query) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function addSocial($ID_Trabajador, $name_red_social, $url_red_social)
+    {
+
+
+        $data = [
+            "ID_Trabajador"   => $ID_Trabajador,
+            "name_red_social" => $name_red_social,
+            "url_red_social"  => $url_red_social
+        ];
+
+        $query = $this->db->insert('redes_sociales', $data);
 
         if ($query) {
             return true;
@@ -45,8 +89,3 @@ class M_Employee extends CI_Model
 }
 
 /* End of file M_Employee.php */
-
-
-
-
-	
