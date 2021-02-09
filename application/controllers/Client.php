@@ -15,6 +15,7 @@ class Client extends CI_Controller {
             redirect(base_url());
         }
         $this->load->model('M_Client');
+        $this->load->model('M_Employee');
         
     }
 
@@ -64,10 +65,12 @@ class Client extends CI_Controller {
 
             redirect(base_url());
         } elseif ($role == 'ROLE_Client') {
-            $resp['getUserByID'] = $this->M_Client->getUserByIDEmployee($IDE);
+            $data['getUserByID']      = $this->M_Employee->getUserByID($IDE);
+            $data['getEducationByiD'] = $this->M_Employee->getEducationByiD($IDE);
+            $data['getSocialByID']    = $this->M_Employee->getSocialByID($IDE);
             $this->load->view('template_client/Header');
             $this->load->view('template_client/Navbar');
-            $this->load->view('pages_client/profileEmployee',$resp);
+            $this->load->view('pages_client/profileEmployee',$data);
             $this->load->view('template_client/Footer');
         } else {
 
@@ -75,7 +78,37 @@ class Client extends CI_Controller {
         }
     }
 
+    public function messageEmployee($IDE)
+    {
+                if ($this->input->is_ajax_request()) {
 
-}
+            $input_ID_Client  = $this->session->userdata('id');
+            $input_asunto     = $this->input->post('inputAsunto');
+            $input_mensaje    = $this->input->post('inputContext');
+
+            $result = $this->M_Client->sendMessageByID(
+                $IDE,
+                $input_ID_Client,
+                $input_asunto,
+                $input_mensaje
+            );
+
+            if ($result) {
+                echo ('1');
+            } else {
+                echo ('0');
+            }
+        } else {
+            $this->index();
+        }
+        
+        	
+    }
+
+    }
+
+
+
 
 /* End of file Client.php */
+

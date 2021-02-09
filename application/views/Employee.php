@@ -218,7 +218,7 @@
                           <input class="form-control" name="input_asunto" id="input_asunto" type="text" placeholder="Asunto:">
                         </div>
                         <div class="form-group">
-                          <textarea id="compose-textarea"  name="input_mensaje" id="input_mensaje" class="form-control" style="height: 300px"></textarea>
+                          <textarea id="compose-textarea" ty name="input_mensaje" id="input_mensaje" class="form-control" style="height: 300px"></textarea>
                         </div>
                       </div>
                       <!-- /.card-body -->

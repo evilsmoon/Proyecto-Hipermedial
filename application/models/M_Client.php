@@ -1,15 +1,16 @@
 <?php
 
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class M_Client extends CI_Model {
+class M_Client extends CI_Model
+{
 
     function __construct()
-	{
-		parent::__construct();
-		$this->load->database();
-	}
+    {
+        parent::__construct();
+        $this->load->database();
+    }
     public function getUserByID($ID)
     {
         $this->db->where('ID_Usuario', $ID);
@@ -23,7 +24,7 @@ class M_Client extends CI_Model {
     public function get_employeesAtUser()
     {
         $query = $this->db->get('trabajadores');
-        return $query -> result();
+        return $query->result();
     }
     public function getUserByIDEmployee($ID)
     {
@@ -35,8 +36,27 @@ class M_Client extends CI_Model {
             return false;
         }
     }
-    
 
+    public function sendMessageByID(
+        $ID_Trabajador,
+        $ID_Usuario,
+        $asunto,
+        $mensaje
+    ) {
+        $data = [
+            "ID_Trabajador" => $ID_Trabajador,
+            "ID_Usuario"    => $ID_Usuario,
+            "asunto"        => $asunto,
+            "mensaje"       => $mensaje
+        ];
+        $query = $this->db->insert('mensajeria', $data);
+
+        if ($query) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 /* End of file M_Client.php */
